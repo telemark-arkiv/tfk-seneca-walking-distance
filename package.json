@@ -1,6 +1,6 @@
 {
   "name": "tfk-seneca-walking-distance",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Measure walking distance",
   "license": "MIT",
   "author": {
@@ -17,9 +17,9 @@
     "node": ">=4.6.0"
   },
   "scripts": {
-    "test": "standard && nsp check && tap --reporter=spec test/*.js",
-    "coverage": "tap test/*.js --coverage",
-    "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
+    "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
+    "coverage": "tap test/**/*.js --coverage",
+    "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
     "start": "node service.js",
     "isolated": "TFK_SENECA_WALKING_DISTANCE_ISOLATED=1 node service.js",
     "setup": "npm install && node setup.js"
